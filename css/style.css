@@ -6,11 +6,10 @@ article {
     border-radius: 8px;
     padding: 7px;
     margin: 5px -2% 4px 4% ;   
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Space_Needle_2011-07-04.jpg/1200px-Space_Needle_2011-07-04.jpg);
+    /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Space_Needle_2011-07-04.jpg/1200px-Space_Needle_2011-07-04.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-color: blue; */
-    
+    background-color: rgba(200,200,200,0.75);    
 }
 article ul{
     list-style: circle;
@@ -19,6 +18,7 @@ article ul{
     -webkit-text-stroke: white 0.2px;
     font-size: 22px;
     font-family: fantasy;
+    
 
 }
 h2 {
@@ -50,3 +50,56 @@ body{
     background-image: url("https://previews.123rf.com/images/alexardna/alexardna1701/alexardna170100010/71728378-fish-ocean-cookies-on-white.jpg" );
     background-size: cover;
 }
+article:nth-child(1):hover{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Space_Needle_2011-07-04.jpg/1200px-Space_Needle_2011-07-04.jpg);
+    ;
+}
+article:nth-child(1) ul:hover{
+    z-index: -10;
+}
+article:nth-child(2):hover{
+    background-image: url(https://live.staticflickr.com/4608/25259840727_fca559b18d_b.jpg);
+    ;
+}
+article:nth-child(2) ul:hover{
+    z-index: -10;
+}
+article:nth-child(3):hover{
+    background-image: url(https://i.pinimg.com/originals/1a/ff/c0/1affc0c06b09143acf6c61964107abdb.jpg);
+    ;
+}
+article:nth-child(3) ul:hover{
+    z-index: -10;
+}
+article:nth-child(4):hover{
+    background-image: url(https://previews.123rf.com/images/rglinsky/rglinsky1211/rglinsky121100042/16694641-vertical-oriented-image-of-famous-eiffel-tower-and-traditional-urban-lampposts-in-paris-france-.jpg);
+    ;
+}
+article:nth-child(4) ul:hover{
+    z-index: -10;
+}
+article:nth-child(5):hover{
+    background-image: url(https://ak.picdn.net/offset/photos/591f3e9917fb156e48060f27/medium/photo.jpg);
+    ;
+}
+article:nth-child(5) ul:hover{
+    z-index: -10;
+}
+table td{
+    /* border: 1px solid black; */
+    padding: 10px;
+    border: 6px solid black;
+    border-style: double;
+}
+table {
+    /* border: 1px solid black; */
+    font-size: 25px;
+    padding: 10px;
+    margin: 50px;
+    background: rgba(220,220, 220, 0.75);
+    border-style: double;
+}
+/* table, th,table td{
+    border: 1px solid black;
+    border-style: double;
+} */
