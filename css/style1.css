@@ -1,0 +1,89 @@
+body {
+    background-image: url('https://previews.123rf.com/images/imelnyk/imelnyk1506/imelnyk150600065/41185724-cookies-background.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    color: #545454;
+}
+#about p {
+    margin: 19% 6% -4% 28%;
+    font-size: 25px;
+    font-family: monospace;
+}
+header {
+    text-align: center;
+    width: 75%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    border: 1px solid beige;
+    border-radius: 0px 0px 0px 25px;
+    background-color: #f4ebe6e3;
+    z-index: 20;
+}
+header h1 {
+    font-size: 47px;
+    color: #d76d2e;
+    padding: 0px 0px 6px 0px;
+}
+header nav {
+    padding: 1%;
+}
+header nav li {
+    display: inline-block;
+    padding: 0px 9%;
+}
+a{
+    text-decoration: none;
+    color: #63504f;
+    font-size: 21px;
+}
+#Branches{
+    display: flex;
+    clear: both;
+    margin: 11% 4% 10% 28%;
+}
+#Branches article{
+    padding: 1%;
+    font-size: 21px;
+    border: solid #6e2b07;
+    border-radius: 25px;
+    margin: 2px;
+ 
+
+
+}
+img{
+    width: 154px;
+    margin: 7px 1px 18px 1px;
+    height: 259px;
+    border: solid 1px #e8ba848c;
+    border-radius: 13px;
+}
+#Branches p{
+    position: relative;
+    bottom: 1px ;
+}
+#contact_us{
+    margin: 11% 6% 17% 38%;
+    font-size: 31px;
+}
+input {
+    /* position: relative;
+    left: 115px; */
+    width:200px;
+    height: 20px;
+    margin: 2%;
+}
+#massage {
+    width:90%;
+    height: 200px;
+}
+#submit{
+    position: absolute;
+    right: 85px;
+    /* left: 420px; */
+    width: 106px;
+    border: 1px gray solid;
+    border-radius: 3px;
+}
+.anchor { padding-top: 95px; }

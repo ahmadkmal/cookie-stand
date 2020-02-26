@@ -103,3 +103,25 @@ table {
     border: 1px solid black;
     border-style: double;
 } */
+nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    clear: both;
+
+}
+nav ul li {
+    display:inline-block;
+    /* clear: both; */
+    background-color: darkgray; 
+    margin: 0px 10% 0 10%;  
+    /* align-items: center; */
+    padding: 3px 3.6%;
+}
+nav{
+    /* align-items: center; */
+    background-color: darkgray;  
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10; ;
+}
