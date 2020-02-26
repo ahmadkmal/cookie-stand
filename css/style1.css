@@ -45,10 +45,10 @@ a{
 #Branches article{
     padding: 1%;
     font-size: 21px;
-    border: solid #6e2b07;
+    border: solid #6e2b07a6;
     border-radius: 25px;
+    background: #f5f5dc6b;
     margin: 2px;
- 
 
 
 }
