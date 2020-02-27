@@ -220,6 +220,7 @@ var hourArr = ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4
 // shop3.dispay();
 // shop4.dispay();
 // shop5.dispay();
+var shops =[] ;
 function Shop(shopPlace,minCus,maxCus,avCook,openHour,closeHour) {
   // var shop
   this.shopPlace = shopPlace;
@@ -229,6 +230,9 @@ function Shop(shopPlace,minCus,maxCus,avCook,openHour,closeHour) {
   this.genCusPerH = [];
   this.openHour = openHour;
   this.closeHour = closeHour;
+  shops.push(this);
+  this.dispay();
+
 
 }
 Shop.prototype.cusgenerator = function() {
@@ -265,17 +269,17 @@ Shop.prototype.dispay = function(){
   liEl.textContent = `Total : ${this.genCusPerH[ik]} cookies`;
   ull.appendChild(liEl);
 };
-var shop1 = new Shop('seattle',23,65,6.3,6,8);
-shop1.dispay();
-var shop2 = new Shop('tokyo',3,24,1.2,6,8);
-shop2.dispay();
-var shop3 = new Shop('Dubai',11,38,2.3,6,8);
-shop3.dispay();
-var shop4 = new Shop('Paris',20,38,2.3,6,8);
-shop4.dispay();
-var shop5 = new Shop('Lima',2,16,4.6,6,8);
-shop5.dispay();
-var shops =[shop1,shop2,shop3,shop4,shop5];
+new Shop('seattle',23,65,6.3,6,8);
+
+new Shop('tokyo',3,24,1.2,6,8);
+
+new Shop('Dubai',11,38,2.3,6,8);
+
+new Shop('Paris',20,38,2.3,6,8);
+
+new Shop('Lima',2,16,4.6,6,8);
+
+// var shops =[shop1,shop2,shop3,shop4,shop5];
 var container = document.getElementById('table');
 var tableEl = document.createElement('table');
 container.appendChild(tableEl);
@@ -310,6 +314,7 @@ function table(){
   }
 
 }
+new Shop('jordna',10,50,5,6,8);
 table();
 function tableFooter(){
   var hourSum = 0;
@@ -328,4 +333,35 @@ function tableFooter(){
     hourSum=0;
   }
 }
+
 tableFooter();
+var branchForm = document.getElementById('add_branch');
+branchForm.addEventListener('submit' , function(event){
+  event.preventDefault();
+  console.log(event.target);
+  var branchlocation = event.target.branch_location.value;
+  var minCustomer = event.target.branch_min.value;
+  var maxCustoer = event.target.branch_max.value;
+  var avCookies = event.target.avPreCust.value;
+  new Shop(branchlocation,minCustomer,maxCustoer,avCookies,6,8);
+  console.log(shops[-1]);
+  tableEl.innerText = '';
+  table();
+  tableFooter();
+});
+var edite_elemant = document.getElementById('edite_elemant');
+edite_elemant.addEventListener('submit', function(event){
+  event.preventDefault();
+  console.log(event.target);
+  var row = event.target.row.value;
+  var coluomn = event.target.coluomn.value;
+  var newValue = event.target.newValue.value;
+  console.log(newValue);
+  console.log(shops[(row-1)]);
+  console.log(shops[(row-1)].genCusPerH[(coluomn-1)]);
+  shops[(row-1)].genCusPerH[(coluomn-1)]=Number(newValue);
+  tableEl.innerText = '';
+  table();
+  tableFooter();
+});
+
